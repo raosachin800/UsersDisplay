@@ -1,0 +1,119 @@
+body {
+  background: #5e42a6;
+  color: #c5bdbd;
+}
+
+.user-name-li-container {
+  height: 100%;
+}
+.user-name-li-container .user-name-ul {
+  padding-top: 2rem;
+  height: 100%;
+  position: relative;
+  background: #312450;
+  color: #c5bdbd;
+}
+.user-name-li-container .user-name-ul .user-name-list {
+  position: relative;
+}
+.user-name-li-container .user-name-ul .user-name-list::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  top: 2.5em;
+  height: 0.1em;
+  background: black;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, #5e42a6, #b74e91);
+}
+.user-name-li-container .user-name-ul .user-detail-card {
+  display: none;
+}
+.user-name-li-container .user-name-ul .user-detail-card .card {
+  position: relative;
+}
+.user-name-li-container .user-name-ul .user-detail-card .card .close-icon {
+  display: block;
+  position: absolute;
+  width: 24px;
+  right: 0.7rem;
+  top: 0.5rem;
+}
+@media screen and (min-width: 575px) {
+  .user-name-li-container .user-name-ul .user-detail-card .card .close-icon {
+    display: none;
+  }
+}
+.user-name-li-container .user-name-ul .user-detail-card .card .card-link {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.user-name-li-container .user-name-ul .user-detail-card .card .card-text .accordion .accordion-item {
+  border: none;
+}
+.user-name-li-container .user-name-ul .user-detail-card .card .card-text .accordion .accordion-item .accordion-header .accordion-button {
+  padding: 4px 0 0;
+}
+.user-name-li-container .user-name-ul .user-detail-card .card .card-text .accordion .accordion-item .accordion-header .accordion-button:focus {
+  box-shadow: none;
+  border: none;
+}
+.user-name-li-container .user-name-ul .user-detail-card .card .card-text .accordion .accordion-item .accordion-header .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.user-name-li-container .user-name-ul .user-detail-card .card .card-text .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  background-color: #fff;
+  color: #252525;
+  box-shadow: none;
+}
+.user-name-li-container .user-name-ul .user-detail-card .card .card-text .accordion .accordion-item .accordion-body {
+  padding: 8px 0 0 8px;
+}
+.user-name-li-container .user-name-ul:hover .user-detail-card {
+  display: block;
+  position: absolute;
+  left: 0%;
+  z-index: 9999;
+}
+@media screen and (max-width: 575px) {
+  .user-name-li-container .user-name-ul:hover .user-detail-card {
+    position: relative;
+    left: -10%;
+  }
+}
+@media screen and (min-width: 575px) {
+  .user-name-li-container .user-name-ul:hover .user-detail-card {
+    left: 20%;
+  }
+}
+.user-name-li-container .user-name-ul:hover .on-click-close {
+  display: none;
+}
+.user-name-li-container .user-name-ul li {
+  list-style: none;
+  margin: 1rem 0 2rem 0;
+  cursor: pointer;
+}
+
+.user-name-list {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #a9a3a3;
+  font-size: 1.1rem;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+#pills-tab li .nav-link {
+  color: #fff;
+}
+#pills-tab li .nav-link.active {
+  background-color: #312450;
+}
+
+/*# sourceMappingURL=style.css.map */

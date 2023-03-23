@@ -1,0 +1,126 @@
+body {
+  background: #5e42a6;
+  color: #c5bdbd;
+}
+
+// To Display all the list of the usernames
+// Unordered List Container
+.user-name-li-container {
+  height: 100%;
+  .user-name-ul {
+    padding-top: 2rem;
+    height: 100%;
+    position: relative;
+    background: #312450;
+    color: #c5bdbd;
+    .user-name-list {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        top: 2.5em;
+        height: 0.1em;
+        background: black;
+        left: 0;
+        bottom: 0;
+        background-image: linear-gradient(to right, #5e42a6, #b74e91);
+      }
+    }
+    // On Hover Details Card
+    .user-detail-card {
+      display: none;
+      .card {
+        position: relative;
+        .close-icon {
+          display: block;
+          position: absolute;
+          width: 24px;
+          right: 0.7rem;
+          top: 0.5rem;
+          @media screen and (min-width: 575px) {
+            display: none;
+          }
+        }
+        .card-link {
+          font-size: 1rem;
+          font-weight: 500;
+        }
+        .card-text {
+          .accordion {
+            .accordion-item {
+              border: none;
+              .accordion-header {
+                .accordion-button {
+                  padding: 4px 0 0;
+                  &:focus {
+                    box-shadow: none;
+                    border: none;
+                  }
+                  &::after {
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                  }
+                }
+                .accordion-button:not(.collapsed) {
+                  background-color: #fff;
+                  color: #252525;
+                  box-shadow: none;
+                }
+              }
+              .accordion-body {
+                padding: 8px 0 0 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:hover .user-detail-card {
+      display: block;
+      position: absolute;
+      left: 0%;
+      z-index: 9999;
+      @media screen and (max-width: 575px) {
+        position: relative;
+        left: -10%;
+      }
+      @media screen and (min-width: 575px) {
+        left: 20%;
+      }
+    }
+    &:hover .on-click-close {
+      display: none;
+    }
+    li {
+      list-style: none;
+      margin: 1rem 0 2rem 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.user-name-list {
+  position: relative;
+}
+// Universal Styling for Anchor
+a {
+  text-decoration: none;
+  color: #a9a3a3;
+  font-size: 1.1rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Bootstrap Tabs styling
+
+#pills-tab {
+  li {
+    .nav-link {
+      color: #fff;
+      &.active {
+        background-color: #312450;
+      }
+    }
+  }
+}

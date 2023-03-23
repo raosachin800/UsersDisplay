@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>inMobi</title>
+  </head>
+  <body>
+    <section class="posts-section">
+      <div class="container">
+        <div class="row">
+          <!-- Left Section Starts -->
+
+          <div class="col-md-4">
+            <div class="user-name-li-container">
+              <ul class="user-name-ul">
+                <!-- On Hover Details Card Starts -->
+                <div class="user-detail-card">
+                  <div class="card" style="width: 18rem">
+                    <div class="card-body">
+                      <h5 class="card-title user-card-name">Card title</h5>
+                      <h6 class="card-subtitle user-email mb-2 text-muted">
+                        Card subtitle
+                      </h6>
+                      <h6 class="card-subtitle user-number mb-1 text-muted">
+                        Card Number
+                      </h6>
+                      <a href="#" class="card-link user-website">Card link</a>
+                      <div class="card-text">
+                        <div class="accordion" id="accordionExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                              <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree"
+                                aria-expanded="false"
+                                aria-controls="collapseThree"
+                              >
+                                <b> Company Details </b>
+                              </button>
+                            </h2>
+                            <div
+                              id="collapseThree"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="headingThree"
+                              data-bs-parent="#accordionExample"
+                            >
+                              <div class="accordion-body">
+                                <div>
+                                  <span><b>Name : </b></span>
+                                  <p class="company-name"></p>
+                                </div>
+                                <div>
+                                  <span><b>Catchphrase : </b></span>
+                                  <p class="company-catchphrase"></p>
+                                </div>
+                                <div>
+                                  <span><b>BS : </b></span>
+                                  <p class="company-bs"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- On Hover Details Card Ends -->
+              </ul>
+              <template id="ul-template">
+                <li class="user-name-list"></li>
+              </template>
+            </div>
+          </div>
+          <!-- Left Section Ends -->
+          <!-- Right Section Starts -->
+          <div class="col-md-8">
+            <!-- Tab Pills -->
+            <ul
+              class="nav nav-pills mb-3 pt-3 justify-content-center"
+              id="pills-tab"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="pills-posts-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-posts"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-posts"
+                  aria-selected="true"
+                >
+                  Posts
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-albums-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-albums"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-albums"
+                  aria-selected="false"
+                >
+                  Albums
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-todos-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-todos"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-todos"
+                  aria-selected="false"
+                >
+                  Todos
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane posts fade show active"
+                id="pills-posts"
+                role="tabpanel"
+                aria-labelledby="pills-posts-tab"
+                tabindex="0"
+              >
+                <div class="row post-title-container">
+                  <template id="post-template" class="col-md-12">
+                    <div class="col-md-12">
+                      <a href="" class="post-title"> </a>
+                    </div>
+                  </template>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade albums"
+                id="pills-albums"
+                role="tabpanel"
+                aria-labelledby="pills-albums-tab"
+                tabindex="0"
+              >
+                <div class="row album-title-container">
+                  <template id="album-template" class="col-md-12">
+                    <div class="col-md-12">
+                      <a href="" class="album-title"> </a>
+                    </div>
+                  </template>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade todos"
+                id="pills-todos"
+                role="tabpanel"
+                aria-labelledby="pills-todos-tab"
+                tabindex="0"
+              >
+                <div class="row todo-title-container">
+                  <template id="todo-template" class="col-md-12">
+                    <div class="col-md-12">
+                      <a href="" class="todo-title"> </a>
+                    </div>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Right Section Starts -->
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
