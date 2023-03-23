@@ -32,6 +32,10 @@ body {
 }
 .user-name-li-container .user-name-ul .user-detail-card .card {
   position: relative;
+  color: #252525;
+}
+.user-name-li-container .user-name-ul .user-detail-card .card a {
+  color: #252525;
 }
 .user-name-li-container .user-name-ul .user-detail-card .card .close-icon {
   display: block;
@@ -84,7 +88,8 @@ body {
 }
 @media screen and (min-width: 575px) {
   .user-name-li-container .user-name-ul:hover .user-detail-card {
-    left: 20%;
+    left: 80%;
+    top: 5%;
   }
 }
 .user-name-li-container .user-name-ul:hover .on-click-close {

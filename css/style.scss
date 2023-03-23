@@ -32,6 +32,10 @@ body {
       display: none;
       .card {
         position: relative;
+        color: #252525;
+        a {
+          color: #252525;
+        }
         .close-icon {
           display: block;
           position: absolute;
@@ -85,7 +89,8 @@ body {
         left: -10%;
       }
       @media screen and (min-width: 575px) {
-        left: 20%;
+        left: 80%;
+        top: 5%;
       }
     }
     &:hover .on-click-close {

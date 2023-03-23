@@ -4,15 +4,19 @@ const loadJsonData = async (filepath) => {
   return await res.json();
 };
 
-loadJsonData("../jsons/todos.json").then((data) => {
-  const todosData = data;
-  console.log(window.location.pathname);
-  const selectedTodoData = todosData.find(function (data) {
-    if (location.hash === "#" + data.id) {
-      console.log(data);
-      return data;
-    }
-  });
+fetch("https://jsonplaceholder.typicode.com/todos/")
+  .then(function (response) {
+    return response.json();
+  })
+  .then((data) => {
+    const todosData = data;
+    console.log(window.location.pathname);
+    const selectedTodoData = todosData.find(function (data) {
+      if (location.hash === "#" + data.id) {
+        console.log(data);
+        return data;
+      }
+    });
 
-  todoPageTitle.innerHTML = selectedTodoData.title;
-});
+    todoPageTitle.innerHTML = selectedTodoData.title;
+  });
